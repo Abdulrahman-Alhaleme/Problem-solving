@@ -5,10 +5,4 @@
 
 - vscode
 - githup
-=======
-# Tools 
 
-+ vscode
-
-+ githup
- main
