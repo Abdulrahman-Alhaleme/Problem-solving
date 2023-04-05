@@ -213,7 +213,7 @@ class LinkedList {
         prevNode.next = currNode.next;
 
         this.length--;
-        return this.head;
+        return currNode.data;
     }
 }
 
