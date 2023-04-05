@@ -172,61 +172,61 @@
 // Q4
 
 
-// class Node {
-//     constructor(data) {
-//         this.data = data;
-//         this.next = null;
-//     }
-// }
+class Node {
+    constructor(data) {
+        this.data = data;
+        this.next = null;
+    }
+}
 
-// class LinkedList {
-//     constructor() {
-//         this.head = null;
-//         this.tail = null;
-//         this.length = 0;
-//     }
+class LinkedList {
+    constructor() {
+        this.head = null;
+        this.tail = null;
+        this.length = 0;
+    }
 
-//     addNode(data) {
-//         const new_node = new Node(data);
-//         if (!this.head) {
-//             this.head = new_node;
-//             this.tail = this.head;
-//         } else {
-//             this.tail.next = new_node;
-//             this.tail = new_node;
-//         }
-//         this.length++;
-//     }
+    addNode(data) {
+        const new_node = new Node(data);
+        if (!this.head) {
+            this.head = new_node;
+            this.tail = this.head;
+        } else {
+            this.tail.next = new_node;
+            this.tail = new_node;
+        }
+        this.length++;
+    }
 
-//     deleteMiddleNode() {
-//         if (this.length < 2) {
-//             return this.head;
-//         }
-//         const middle = Math.floor(this.length / 2);
-//         let prevNode = null;
-//         let currNode = this.head;
-//         for (let i = 0; i < middle; i++) {
-//             prevNode = currNode;
-//             currNode = currNode.next;
-//         }
-//         console.log(prevNode.next);
-//         prevNode.next = currNode.next;
+    deleteMiddleNode() {
+        if (this.length < 2) {
+            return this.head;
+        }
+        const middle = Math.floor(this.length / 2);
+        let prevNode = null;
+        let currNode = this.head;
+        for (let i = 0; i < middle; i++) {
+            prevNode = currNode;
+            currNode = currNode.next;
+        }
+        console.log(prevNode.next);
+        prevNode.next = currNode.next;
 
-//         this.length--;
-//         return this.head;
-//     }
-// }
+        this.length--;
+        return this.head;
+    }
+}
 
-// const linkedList = new LinkedList();
-// linkedList.addNode(1);
-// linkedList.addNode(2);
-// linkedList.addNode(3);
-// linkedList.addNode(4);
-// linkedList.addNode(5);
+const linkedList = new LinkedList();
+linkedList.addNode(1);
+linkedList.addNode(2);
+linkedList.addNode(3);
+linkedList.addNode(4);
+linkedList.addNode(5);
 
 // console.log(linkedList)
 
-// console.log()
+console.log(linkedList.deleteMiddleNode())
 
 
 
@@ -248,45 +248,45 @@
 // Q5
 
 
-class Node {
-    constructor(val) {
-        this.data = val;
-        this.next = null;
-    }
-}
+// class Node {
+//     constructor(val) {
+//         this.data = val;
+//         this.next = null;
+//     }
+// }
 
-/* Function to reverse the linked list */
-function reverse(node) {
-    let prev = null;
-    let current = node;
-    let next = null;
-    while (current != null) {
-        next = current.next;
-        current.next = prev;
-        prev = current;
-        current = next;
-    }
-    node = prev;
-    return node;
-}
+// /* Function to reverse the linked list */
+// function reverse(node) {
+//     let prev = null;
+//     let current = node;
+//     let next = null;
+//     while (current != null) {
+//         next = current.next;
+//         current.next = prev;
+//         prev = current;
+//         current = next;
+//     }
+//     node = prev;
+//     return node;
+// }
 
-// prints content of double linked list
-function printList(node) {
-    while (node != null) {
-        console.log(node.data + " ");
-        node = node.next;
-    }
-}
+// // prints content of double linked list
+// function printList(node) {
+//     while (node != null) {
+//         console.log(node.data + " ");
+//         node = node.next;
+//     }
+// }
 
-// Driver Code
+// // Driver Code
 
-head = new Node(10);
-head.next = new Node(20);
-head.next.next = new Node(30);
-head.next.next.next = new Node(40);
+// head = new Node(10);
+// head.next = new Node(20);
+// head.next.next = new Node(30);
+// head.next.next.next = new Node(40);
 
-console.log("Given linked list");
-printList(head);
-head = reverse(head);
-console.log("Reversed linked list ");
-printList(head);
+// console.log("Given linked list");
+// printList(head);
+// head = reverse(head);
+// console.log("Reversed linked list ");
+// printList(head);
